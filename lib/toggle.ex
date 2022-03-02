@@ -38,5 +38,6 @@ defmodule Toggle do
 
   defp uno_reverse(:enabled), do: :disabled
   defp uno_reverse(:disabled), do: :enabled
+  defp uno_reverse(_), do: :disabled
 
 end
