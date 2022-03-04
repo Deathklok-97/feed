@@ -10,11 +10,11 @@ defmodule GeneratorTests do
     def text_like() do
       let l <-
           list(
-            frequencey([
+            frequency([
               {80, range(?a, ?z)},
               {10, ?\s},
               {1, ?\n},
-              {1, one_of([?., ?-, ?!, ??, ?,])},
+              {1, oneof([?., ?-, ?!, ??, ?,])},
               {1, range(?0, ?9)}
             ])
           ) do
@@ -23,7 +23,7 @@ defmodule GeneratorTests do
     end
 
     def robot_path do
-      list(one_of([:left, :right, :up, :down]))
+      list(oneof([:left, :right, :up, :down]))
     end
 
 end
