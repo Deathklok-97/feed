@@ -1,4 +1,5 @@
 %{
+  "blocking_queue": {:hex, :blocking_queue, "1.3.0", "dc89343242db43b3a5618c41b258795f8e8258ec528a763e70ceb2763bd96b92", [:mix], [], "hexpm", "10f2b942a29f83c3bfef6285096d7f42028201c89f317c731e708b528a7fc17d"},
   "earmark_parser": {:hex, :earmark_parser, "1.4.20", "89970db71b11b6b89759ce16807e857df154f8df3e807b2920a8c39834a9e5cf", [:mix], [], "hexpm", "1eb0d2dabeeeff200e0d17dc3048a6045aab271f73ebb82e416464832eb57bdd"},
   "ex_doc": {:hex, :ex_doc, "0.28.2", "e031c7d1a9fc40959da7bf89e2dc269ddc5de631f9bd0e326cbddf7d8085a9da", [:mix], [{:earmark_parser, "~> 1.4.19", [hex: :earmark_parser, repo: "hexpm", optional: false]}, {:makeup_elixir, "~> 0.14", [hex: :makeup_elixir, repo: "hexpm", optional: false]}, {:makeup_erlang, "~> 0.1", [hex: :makeup_erlang, repo: "hexpm", optional: false]}], "hexpm", "51ee866993ffbd0e41c084a7677c570d0fc50cb85c6b5e76f8d936d9587fa719"},
   "makeup": {:hex, :makeup, "1.1.0", "6b67c8bc2882a6b6a445859952a602afc1a41c2e08379ca057c0f525366fc3ca", [:mix], [{:nimble_parsec, "~> 1.2.2 or ~> 1.3", [hex: :nimble_parsec, repo: "hexpm", optional: false]}], "hexpm", "0a45ed501f4a8897f580eabf99a2e5234ea3e75a4373c8a52824f6e873be57a6"},
@@ -6,5 +7,6 @@
   "makeup_erlang": {:hex, :makeup_erlang, "0.1.1", "3fcb7f09eb9d98dc4d208f49cc955a34218fc41ff6b84df7c75b3e6e533cc65f", [:mix], [{:makeup, "~> 1.0", [hex: :makeup, repo: "hexpm", optional: false]}], "hexpm", "174d0809e98a4ef0b3309256cbf97101c6ec01c4ab0b23e926a9e17df2077cbb"},
   "nimble_parsec": {:hex, :nimble_parsec, "1.2.3", "244836e6e3f1200c7f30cb56733fd808744eca61fd182f731eac4af635cc6d0b", [:mix], [], "hexpm", "c8d789e39b9131acf7b99291e93dae60ab48ef14a7ee9d58c6964f59efb570b0"},
   "poolboy": {:hex, :poolboy, "1.5.2", "392b007a1693a64540cead79830443abf5762f5d30cf50bc95cb2c1aaafa006b", [:rebar3], [], "hexpm", "dad79704ce5440f3d5a3681c8590b9dc25d1a561e8f5a9c995281012860901e3"},
+  "proper": {:hex, :proper, "1.4.0", "89a44b8c39d28bb9b4be8e4d715d534905b325470f2e0ec5e004d12484a79434", [:rebar3], [], "hexpm", "18285842185bd33efbda97d134a5cb5a0884384db36119fee0e3cfa488568cbb"},
   "remix": {:hex, :remix, "0.0.2", "f06115659d8ede8d725fae1708920ef73353a1b39efe6a232d2a38b1f2902109", [:mix], [], "hexpm", "5f5555646ed4fca83fab8620735150aa0bc408c5a17a70d28cfa7086bc6f497c"},
 }

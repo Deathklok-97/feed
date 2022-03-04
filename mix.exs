@@ -21,11 +21,11 @@ defmodule Algolia.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
       {:remix, "~> 0.0.2", only: :dev},
       {:ex_doc, "~> 0.28.2", only: :dev, runtime: false},
-      {:poolboy, "~> 1.5"}
+      {:proper, "~> 1.4", only: :test},
+      {:poolboy, "~> 1.5"},
+      {:blocking_queue, "~> 1.3"}
     ]
   end
 end
