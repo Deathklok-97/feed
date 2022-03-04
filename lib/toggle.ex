@@ -8,7 +8,7 @@ defmodule Toggle do
   @doc false
   @spec start_link(any) :: {:error, any} | {:ok, pid}
   def start_link(initial_value \\ :enabled) do
-    Agent.start_link(fn -> initial_value end, name: __MODULE__)
+    Agent.start_link(fn -> starting_value(initial_value) end, name: __MODULE__)
   end
 
 
@@ -39,5 +39,9 @@ defmodule Toggle do
   defp uno_reverse(:enabled), do: :disabled
   defp uno_reverse(:disabled), do: :enabled
   defp uno_reverse(_), do: :disabled
+
+
+  defp starting_value(:enabled), do: :enabled
+  defp starting_value(_), do: :disabled
 
 end
