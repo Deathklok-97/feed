@@ -23,7 +23,7 @@ defmodule Algolia.MixProject do
     [
       {:remix, "~> 0.0.2", only: :dev},
       {:ex_doc, "~> 0.28.2", only: :dev, runtime: false},
-      {:proper, "~> 1.4", only: :test},
+      {:propcheck, "~> 1.4", only: [:test, :dev]},
       {:poolboy, "~> 1.5"},
       {:blocking_queue, "~> 1.3"}
     ]
