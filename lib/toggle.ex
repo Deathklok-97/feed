@@ -6,7 +6,7 @@ defmodule Toggle do
   """
 
   @doc false
-  @spec start_link(any) :: {:error, any} | {:ok, pid}
+  @spec start_link(:enabled | :disabled) :: {:error, any} | {:ok, pid}
   def start_link(initial_value \\ :enabled) do
     Agent.start_link(fn -> starting_value(initial_value) end, name: __MODULE__)
   end
