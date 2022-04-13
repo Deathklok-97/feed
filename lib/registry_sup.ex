@@ -23,6 +23,7 @@ defmodule RegistrySuperviosr do
     end
   end
 
+  @spec sale_item_process_exists?(integer) :: boolean
   def sale_item_process_exists?(sale_item_id) when is_integer(sale_item_id) do
     case Registry.lookup(:product_process_registry, sale_item_id) do
       [] -> false
