@@ -1,4 +1,4 @@
-defmodule RegistrySuperviosr do
+defmodule RegistrySupervisor do
   use Supervisor
 
   @spec start_link(any) :: :ignore | {:error, any} | {:ok, pid}
@@ -9,7 +9,7 @@ defmodule RegistrySuperviosr do
   @impl true
   def init(_init_arg) do
     children = [
-      {Registry, [:unique, :product_process_registry]}
+      {Registry, [keys: :unique, name: :product_process_registry]}
     ]
 
     Supervisor.init(children, strategy: :one_for_one)
