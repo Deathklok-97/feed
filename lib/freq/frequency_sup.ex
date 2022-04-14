@@ -7,7 +7,7 @@ defmodule FrequencySupervisor do
       {FrequencyOverload, []}
     ]
 
-    opts = [ strategy: :one_for_one name: __MODULE__]
+    opts = [ strategy: :one_for_one, name: __MODULE__]
 
     Supervisor.start_link(children, opts)
   end
