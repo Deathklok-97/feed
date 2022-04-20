@@ -1,12 +1,16 @@
 defmodule EventLogger do
-
   use GenServer
+
+  @moduledoc """
+    One event hanlder
+  """
+
 
   @default_handlers [ {:splunk, :enabled} ]
 
   def start_link(opts) do
     handlers = Keyword.merge(@default_handlers, opts)
-    
+
     GenServer.start_link(__MODULE__, handlers, name: __MODULE__)
   end
 

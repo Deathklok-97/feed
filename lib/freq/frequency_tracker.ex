@@ -2,6 +2,11 @@ defmodule FrequencyTracker do
   use GenServer
   require Logger
 
+  @moduledoc """
+    tracking failures of starting processes or processes that never finish, and either generate and event
+    or possibly an alarm depending on how frequent
+  """
+
   @registry :process_registry
 
 

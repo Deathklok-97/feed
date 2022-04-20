@@ -1,6 +1,12 @@
 defmodule DynamicWorker do
   use GenServer
 
+  @moduledoc """
+    Dynamic worker tracks one group of work after results are receive it transitions to the next step
+    in the state
+  """
+
+
   @registry :process_registry
 
   @initial_data [{:siblings, nil}, {:attributes, nil}, {:images, nil}]
