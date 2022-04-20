@@ -1,18 +1,17 @@
 defmodule EventSupervisor do
   use Supervisor
 
-
-  
+  def start_link(_arg) do
+    Supervisor.start_link(__MODULE__, [], name: __MODULE__)
+  end
 
   def init(_args) do
     children = [
-      {Alarm, []},
-      {EventLogger, []}
+      Alarm,
+      EventLogger
     ]
 
-    opts = [strategy: :one_for_one, name: __MODULE__]
-
-    Supervisor.start_link(children, opts)
+    Supervisor.init(children, strategy: :one_for_one)
   end
 
 end
