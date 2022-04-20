@@ -6,7 +6,8 @@ defmodule Algolia do
   def start(_type, _args) do
     children = [
       {Registry, [keys: :unique, name: @registry]},
-      DynoSupervisor
+      DynoSupervisor,
+      FrequencySupervisor
     ]
 
     opts = [strategy: :one_for_one, name: __MODULE__]

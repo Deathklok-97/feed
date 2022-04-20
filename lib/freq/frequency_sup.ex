@@ -8,11 +8,11 @@ defmodule FrequencySupervisor do
 
   def init(_args) do
     children = [
-      # {FrequencyWorker, [] },
+      FrequencyTracker,
       FrequencyOverload
     ]
 
-    Supervisor.init(children, strategy: :one_for_one, name: __MODULE__)
+    Supervisor.init(children, strategy: :one_for_one)
   end
 
 end

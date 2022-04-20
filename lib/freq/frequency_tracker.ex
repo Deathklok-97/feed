@@ -7,7 +7,7 @@ defmodule FrequencyTracker do
 
   #Client
   def start_link(name) do
-    GenServer.start_link(__MODULE__, name, name: via_tuple(name))
+    GenServer.start_link(__MODULE__, name, name: __MODULE__)
   end
 
 
