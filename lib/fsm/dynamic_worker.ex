@@ -6,17 +6,12 @@ defmodule DynamicWorker do
   @initial_data [{:siblings, nil}, {:attributes, nil}, {:images, nil}]
 
   def start_link(name) do
+    IO.puts "starting child #{name}"
     GenServer.start_link(__MODULE__, @initial_data, name: via_tuple(name))
   end
 
 
-  def child_specification(process_name) do
-    %{
-      id: __MODULE__,
-      start: {__MODULE__, :start_link, [process_name]},
-      restart: :transient
-    }
-  end
+
 
 
   @impl true

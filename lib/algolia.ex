@@ -1,16 +1,12 @@
 defmodule Algolia do
  use Application
 
- alias FrequencySupervisor
-
  @registry :process_registry
 
-  def start(_arg, _arg2) do
+  def start(_type, _args) do
     children = [
       {Registry, [keys: :unique, name: @registry]},
-      {FrequencySupervisor, []},
-      {EventSupervisor, []},
-
+      DynoSupervisor
     ]
 
     opts = [strategy: :one_for_one, name: __MODULE__]
