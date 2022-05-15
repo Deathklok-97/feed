@@ -1,12 +1,10 @@
 defmodule Algolia do
  use Application
 
- @registry :process_registry
-
   def start(_type, _args) do
     children = [
-      {Registry, [keys: :unique, name: @registry]},
-      DynoSupervisor,
+      {Registry, [name: Registry.DynamicSession, keys: :unique]},
+      {DynamicSupervisor, [name: Boundary.DynamicSession, strategy: :one_for_one]},
       FrequencySupervisor,
       EventSupervisor
     ]

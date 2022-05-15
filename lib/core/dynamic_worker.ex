@@ -6,7 +6,6 @@ defmodule DynamicWorker do
     in the state
   """
 
-
   @registry :process_registry
 
   @initial_data [{:siblings, nil}, {:attributes, nil}, {:images, nil}]
@@ -15,8 +14,6 @@ defmodule DynamicWorker do
     IO.puts "starting child #{name}"
     GenServer.start_link(__MODULE__, @initial_data, name: via_tuple(name))
   end
-
-
 
 
 
